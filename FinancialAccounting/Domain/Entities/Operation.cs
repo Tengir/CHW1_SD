@@ -44,7 +44,8 @@ namespace FinancialAccounting.Domain.Entities
         public Operation(Guid bankAccountId, Guid categoryId, decimal amount, DateTime date, string description = null)
         {
             if (bankAccountId == Guid.Empty)
-                throw new ArgumentException("Идентификатор банковского счёта не может быть пустым.", nameof(bankAccountId));
+                throw new ArgumentException("Идентификатор банковского счёта не может быть пустым.",
+                    nameof(bankAccountId));
             if (categoryId == Guid.Empty)
                 throw new ArgumentException("Идентификатор категории не может быть пустым.", nameof(categoryId));
             if (amount == 0)
@@ -81,6 +82,21 @@ namespace FinancialAccounting.Domain.Entities
                 account.Deposit(Amount);
             else
                 account.Withdraw(Math.Abs(Amount));
+        }
+
+        /// <summary>
+        /// Метод для корректировки операции. Изменяет сумму и описание.
+        /// </summary>
+        /// <param name="newAmount">Новая сумма операции.</param>
+        /// <param name="newDescription">Новое описание операции.</param>
+        public void CorrectOperation(decimal newAmount, string newDescription)
+        {
+            if (newAmount == 0)
+                throw new ArgumentException("Сумма операции не может быть равна нулю.", nameof(newAmount));
+
+            // Обновляем поля через внутреннюю логику (private set позволяет изменять внутри класса)
+            this.Amount = newAmount;
+            this.Description = newDescription;
         }
     }
 }

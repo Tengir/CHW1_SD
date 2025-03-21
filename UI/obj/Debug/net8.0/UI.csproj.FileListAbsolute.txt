@@ -20,3 +20,4 @@ C:\Users\Tengir\RiderProjects\CHW1_SD\UI\obj\Debug\net8.0\UI.csproj.AssemblyRefe
 C:\Users\Tengir\RiderProjects\CHW1_SD\UI\obj\Debug\net8.0\UI.csproj.Up2Date
 C:\Users\Tengir\RiderProjects\CHW1_SD\UI\bin\Debug\net8.0\Microsoft.Extensions.DependencyModel.dll
 C:\Users\Tengir\RiderProjects\CHW1_SD\UI\bin\Debug\net8.0\Scrutor.dll
+C:\Users\Tengir\RiderProjects\CHW1_SD\UI\obj\Debug\net8.0\UI.sourcelink.json

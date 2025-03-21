@@ -68,31 +68,48 @@ namespace FinancialAccounting.Application.Services
 
         public async Task<OperationDTO> UpdateOperationAsync(UpdateOperationCommand command)
         {
+            // Получаем операцию по ID
             var operation = await _operationRepository.GetByIdAsync(command.OperationId);
             if (operation == null)
                 throw new Exception("Операция не найдена.");
 
-            // Пример обновления: меняем сумму и описание (реальная логика может быть сложнее)
-            // Здесь следует добавить вашу бизнес-логику для обновления операции.
-            // Для примера установим сумму и описание напрямую.
-            // Предположим, что операция обновляется через доменную логику, но для упрощения делаем напрямую:
-            // (В реальном коде, возможно, операция должна быть пересчитана, а баланс счета изменён)
-            // Например:
-            // operation.UpdateAmount(command.NewAmount);
-            // operation.UpdateDescription(command.NewDescription);
-            // А затем сохраняем:
+            // Получаем банковский счёт, связанный с операцией
+            var account = await _accountRepository.GetByIdAsync(operation.BankAccountId);
+            if (account == null)
+                throw new Exception("Банковский счёт не найден.");
+
+            // Реверсируем влияние старой операции:
+            // Если операция была доходной, вычитаем её сумму; если расходной — возвращаем сумму.
+            if (operation.Amount > 0)
+                account.Withdraw(operation.Amount);
+            else
+                account.Deposit(Math.Abs(operation.Amount));
+
+            // Обновляем операцию через CorrectOperation
+            operation.CorrectOperation(command.NewAmount, command.NewDescription);
+
+            // Применяем новую операцию к счёту:
+            if (operation.Amount > 0)
+                account.Deposit(operation.Amount);
+            else
+                account.Withdraw(Math.Abs(operation.Amount));
+
+            // Сохраняем изменения
             await _operationRepository.UpdateAsync(operation);
+            await _accountRepository.UpdateAsync(account);
 
             return new OperationDTO
             {
                 Id = operation.Id,
                 BankAccountId = operation.BankAccountId,
                 CategoryId = operation.CategoryId,
-                Amount = operation.Amount, // В реальном случае – новое значение
+                Amount = operation.Amount,
                 Date = operation.Date,
-                Description = operation.Description // Новое описание
+                Description = operation.Description
             };
         }
+
+
 
         public async Task DeleteOperationAsync(DeleteOperationCommand command)
         {
