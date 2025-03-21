@@ -1,0 +1,13 @@
+{
+  "version": 2,
+  "dgSpecHash": "e5qfKd98dd4=",
+  "success": true,
+  "projectFilePath": "C:\\Users\\Tengir\\RiderProjects\\CHW1_SD\\UI\\UI.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Tengir\\.nuget\\packages\\microsoft.extensions.dependencyinjection\\9.0.3\\microsoft.extensions.dependencyinjection.9.0.3.nupkg.sha512",
+    "C:\\Users\\Tengir\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\9.0.3\\microsoft.extensions.dependencyinjection.abstractions.9.0.3.nupkg.sha512",
+    "C:\\Users\\Tengir\\.nuget\\packages\\microsoft.extensions.dependencymodel\\8.0.2\\microsoft.extensions.dependencymodel.8.0.2.nupkg.sha512",
+    "C:\\Users\\Tengir\\.nuget\\packages\\scrutor\\6.0.1\\scrutor.6.0.1.nupkg.sha512"
+  ],
+  "logs": []
+}

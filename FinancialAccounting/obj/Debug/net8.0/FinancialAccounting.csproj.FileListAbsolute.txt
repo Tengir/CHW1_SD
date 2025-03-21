@@ -1,0 +1,12 @@
+C:\Users\Tengir\RiderProjects\CHW1_SD\FinancialAccounting\bin\Debug\net8.0\FinancialAccounting.deps.json
+C:\Users\Tengir\RiderProjects\CHW1_SD\FinancialAccounting\bin\Debug\net8.0\FinancialAccounting.dll
+C:\Users\Tengir\RiderProjects\CHW1_SD\FinancialAccounting\bin\Debug\net8.0\FinancialAccounting.pdb
+C:\Users\Tengir\RiderProjects\CHW1_SD\FinancialAccounting\obj\Debug\net8.0\FinancialAccounting.csproj.AssemblyReference.cache
+C:\Users\Tengir\RiderProjects\CHW1_SD\FinancialAccounting\obj\Debug\net8.0\FinancialAccounting.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Tengir\RiderProjects\CHW1_SD\FinancialAccounting\obj\Debug\net8.0\FinancialAccounting.AssemblyInfoInputs.cache
+C:\Users\Tengir\RiderProjects\CHW1_SD\FinancialAccounting\obj\Debug\net8.0\FinancialAccounting.AssemblyInfo.cs
+C:\Users\Tengir\RiderProjects\CHW1_SD\FinancialAccounting\obj\Debug\net8.0\FinancialAccounting.csproj.CoreCompileInputs.cache
+C:\Users\Tengir\RiderProjects\CHW1_SD\FinancialAccounting\obj\Debug\net8.0\FinancialAccounting.dll
+C:\Users\Tengir\RiderProjects\CHW1_SD\FinancialAccounting\obj\Debug\net8.0\refint\FinancialAccounting.dll
+C:\Users\Tengir\RiderProjects\CHW1_SD\FinancialAccounting\obj\Debug\net8.0\FinancialAccounting.pdb
+C:\Users\Tengir\RiderProjects\CHW1_SD\FinancialAccounting\obj\Debug\net8.0\ref\FinancialAccounting.dll
